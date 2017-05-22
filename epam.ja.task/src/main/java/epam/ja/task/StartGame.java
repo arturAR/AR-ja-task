@@ -16,7 +16,7 @@ public class StartGame {
 		View view = new View(controller);
 		do {
 			view.showStartMenu();
-		} while(view.getArenaSize() <= 0);
+		} while(view.getArenaSize() <= 1);
 		ArenaOperations operations = new ArenaOperations(view.getArenaSize());
 		GameArena arena = operations.getArena();
 		TablePrinter printer = new TablePrinter();
