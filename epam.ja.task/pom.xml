@@ -3,6 +3,6 @@
   <groupId>epam.ja.task</groupId>
   <artifactId>epam.ja.task</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>ja-task</name>
-  <description>ja-task</description>
+  <name>epam.ja.task</name>
+  <description>epam.ja.task</description>
 </project>

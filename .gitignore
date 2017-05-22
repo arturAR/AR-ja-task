@@ -1,5 +1,7 @@
-.classpath
-.project
-/.settings
-/.metadata
-
+/epam.ja.task/.classpath
+/epam.ja.task/.project
+/epam.ja.task/.settings
+/epam.ja.task/target
+/epam.ja.task/.metadata
+/.metadata/
+/.recommenders/
