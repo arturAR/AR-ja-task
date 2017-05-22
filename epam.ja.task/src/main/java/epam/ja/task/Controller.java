@@ -20,6 +20,5 @@ public class Controller {
 	public int getReturnInt() {
 		return scanner.nextInt();
 	}
-	
-	
+
 }

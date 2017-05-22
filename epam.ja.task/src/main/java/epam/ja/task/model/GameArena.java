@@ -7,6 +7,11 @@ public class GameArena {
 	public GameArena(int arenaSize) {
 		this.arena = new PointInTable[arenaSize][arenaSize];
 		this.amountOfPoints = arenaSize * arenaSize;
+		for(int x = 0 ; x < arenaSize; x++) {
+			for(int y = 0 ; y < arenaSize; y++) {
+				arena[x][y] = new PointInTable(x, y);
+			}
+		}
 	}
 	
 	public PointInTable[][] getGameArena() {

@@ -16,7 +16,7 @@ public class TablePrinter {
 	}
 	
 	public String printPoint(PointInTable point) {
-		if(point == null) {
+		if(point.getCharPoint() == null) {
 			return "  ";
 		}
 		return point.getCharPoint();
