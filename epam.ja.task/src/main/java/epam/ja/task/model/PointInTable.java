@@ -11,6 +11,7 @@ public class PointInTable {
 	public PointInTable(int x, int y) {
 		this.x = x;
 		this.y = y;
+		this.charPoint = "  ";
 	}
 	
 	public int getX() {

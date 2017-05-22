@@ -1,7 +1,6 @@
 package epam.ja.task;
 
 import java.util.InputMismatchException;
-import java.util.Scanner;
 
 import epam.ja.task.businessLogic.ArenaOperations;
 import epam.ja.task.businessLogic.GameEngine;

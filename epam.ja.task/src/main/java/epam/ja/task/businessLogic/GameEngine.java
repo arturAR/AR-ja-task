@@ -51,7 +51,13 @@ public class GameEngine {
 	}
 	
 	public void checkDiagonal(String userChar) {
-		
+		for(int x = 0; x < arena.getGameArena()[0].length; x++) {
+			for(int y = 0; y < arena.getGameArena()[0].length; y++) {
+				if(x == y && userChar.equals(arena.getGameArena()[x][y].getCharPoint())) {
+					someoneWin = true;
+				}
+			}
+		}
 	}
 	
 	public void checkSomeoneWin(String userChar) {
@@ -62,12 +68,15 @@ public class GameEngine {
 	public void doGame(int whoStart) {
 		int moveId = whoStart;
 		do {
+			view.showWhoPlay(moveId);
 			Boolean flag;
 			view.showGameMenu();
 			if(moveId % 2 == 0) {
 				flag = setUserChar(arena.getGameArena()[view.getxTemp()-1][view.getyTemp()-1], "O");
+				checkSomeoneWin("O");
 			} else {
-				flag =setUserChar(arena.getGameArena()[view.getxTemp()-1][view.getyTemp()-1], "X");
+				flag = setUserChar(arena.getGameArena()[view.getxTemp()-1][view.getyTemp()-1], "X");
+				checkSomeoneWin("X");
 			}
 			printer.printArena(arena);
 			if(!flag) {
@@ -75,7 +84,7 @@ public class GameEngine {
 			} else {
 				System.out.println("\nWspó³rzêdne zajête, podaj inne.");
 			}	
-			view.showWhoPlay(moveId);
+			
 		} while(amountOfOccupiedPoints != arena.getAmountOfPoints() || someoneWin);
 		view.showResult(moveId);
 	}
